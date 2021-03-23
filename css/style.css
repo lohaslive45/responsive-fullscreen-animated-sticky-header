@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 1000px;
+}
+
+header.sticky {
+  height: 80px;
+}
+
+header.sticky .logo {
+  position: absolute;
+  font-size: 2em;
+  left: 100px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+header.sticky .banner {
+  opacity: 0.5;
+}
+
+header.sticky nav ul {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition-delay: 0.75s;
+          transition-delay: 0.75s;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  font-size: 14vw;
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+}
+
+nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #8ffcff;
+}
+
+section {
+  margin-top: 40vh;
+  padding: 100px;
+}
+
+section h2 {
+  font-size: 3em;
+}
+
+section p {
+  font-size: 1.2em;
+}
+
+@media (max-width: 991px) {
+  section,
+  header {
+    padding: 40px;
+  }
+  section h2 {
+    font-size: 2em;
+  }
+  header.sticky .logo {
+    left: 40px;
+  }
+  header.sticky .banner {
+    opacity: 0;
+  }
+  header.sticky .toggle {
+    position: fixed;
+    top: 15px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #fff url(../pic/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header.sticky .toggle.active {
+    background: #fff url(../pic/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  nav ul {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li a {
+    font-size: 1.2em;
+  }
+  nav.active ul {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header.sticky nav ul {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/*# sourceMappingURL=style.css.map */

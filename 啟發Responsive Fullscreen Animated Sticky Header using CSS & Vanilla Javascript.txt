@@ -1,0 +1,3 @@
+Responsive Fullscreen Animated Sticky Header using CSS & Vanilla Javascript
+
+https://youtu.be/dhmrN2EjkSg
